@@ -1,0 +1,100 @@
+
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Users</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update User</h2>
+            <span class="text-light">Use the below form to Update an account</span>
+        </div>
+
+        <!-- add user form -->
+         <!-- form handling -->
+ <form method="POST" id="update_user">
+    <div class="new_user">
+        <div class="form-group">
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="name" value="<%= user.name %>" placeholder="Enter Name">
+        </div>
+        <div class="form-group">
+            <label for="Email" class="text-light">Email</label>
+            <input type="text" name="email" value="<%= user.email%>" placeholder="example@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="address" class="text-light">Address</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="address" value="<%= user.address %>" placeholder="Enter Address">
+        </div>
+
+        <div class="form-group">
+            <label for="phone" class="text-light">Phone Number</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="phone" value="<%= user.phone %>" placeholder="Enter Phone Number">
+        </div>
+
+        <div class="form-group">
+            <label for="fever" class="text-light">Fever</label>
+            <input type="hidden" name="id" value="<%= user._id %>">
+            <input type="text" name="fever" value="<%= user.fever %>" placeholder="Fever in Fahrenheit">
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Gender</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-2" name="gender" value="Male" <%= user.gender == 'Male' ? 'checked' : '' %>>
+                <label for="radio-2" class="radio-label">Male</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-3" name="gender" value="Female"  <%= user.gender == 'Female' ? 'checked' : '' %> >
+                <label for="radio-3" class="radio-label">Female</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-4" name="status" value="Positive" <%= user.status == 'Positive' ? 'checked' : '' %> >
+                <label for="radio-4" class="radio-label">Positive</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-5" name="status" value="Negative" <%= user.status == 'Negative' ? 'checked' : '' %> >
+                <label for="radio-5" class="radio-label">Negative</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="gender" class="text-light">Admission</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-6" name="admit" value="Admit" <%= user.admit == 'Admit' ? 'checked' : '' %> >
+                <label for="radio-6" class="radio-label">Admit</label>
+            </div>
+            <div class="radio inline">
+                <input type="radio" id="radio-7" name="admit" value="No need" <%= user.admit == 'No need' ? 'checked' : '' %> >
+                <label for="radio-7" class="radio-label">No need</label>
+            </div>
+        </div>
+        <!-- <div class="form-group">
+            
+        </div> -->
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Save</button>
+        </div>
+
+    </div>
+</form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->
