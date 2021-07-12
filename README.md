@@ -6,9 +6,9 @@ Simple COVID-19 Management System
  npm i morgan express axios path body-parser ejs
 
 # Install mongodb
- npm i mongoose
+ ## npm i mongoose
 
 # Run 
-npm start
+## npm start
 
-It will Execute
+# It will Execute
