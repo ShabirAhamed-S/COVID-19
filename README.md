@@ -2,7 +2,7 @@
 Simple COVID-19 Management System
 
 
-# First install morgan, express, path, body-parser, axios, ejs modules using
+# Firstly, install modules are morgan, express, path, body-parser, axios, ejs
  npm i morgan express axios path body-parser ejs
 
 # Install mongodb
